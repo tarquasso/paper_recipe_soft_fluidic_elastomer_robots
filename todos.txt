@@ -1,0 +1,56 @@
+ToDos:
+
+Not Done:
+2. Remove mention of the word planar throughout - Andy
+3. Add Design Fab related work from thesis - Andy
+4. Operating Principle make sure it is not a predictive model - Andy
+5. Updating plots b and c in figure 7 to change curvature to bend angle - Andy
+
+9. Minor Text revision Lost wax casting 
+ 	(changing words like 'manipulation' to 'robots' etc.) - Andy
+10. Modify Power Section so that it talks about: 
+	Transmission medium: pneumatic/hydraulics, allowing any type of liquids. 
+	Architecture: Closed/Open circuit. - Andy
+11. New section 5. 'Locomotion' (Single Segment Manipulation), 
+	Add two types of fish (hydraulic and pneumatic);  
+	-> Adding pictures for those robots  - Robert
+12. Add short explanations to section 5 for the new figures and adding of 
+	Design Constraints for Locomotion/ Design Constraints for portability - Andy  
+13. Make old 3.3 become 6. Manipulators (Multi segment manipulators section), - Robert
+14. Add 3d arm implementation. to section Manipulators - Andy
+15. Review the discussion section - Robert
+16. Rewrite specifics of fabrication section so it does not rely on the multi segment 
+	manipulator section, which was previously before and now is after the fab section
+17. add pneumatic fish figures to fabrication section
+	 before the ribbed manipulator fab description - andy
+18. add hydraulic fish figures to fabrication section after pleated gripper section - robert
+
+
+Done:
+1. Add to new repo - Robert
+6. Former section 3. Actuation renamed to Actuators -Robert
+7. Have a fabrication section taken from 3.4- Robert
+8. Initial rough Restructuring fabrication section: - Robert
+	- Soft Lithography with heterogenous embedding technique 
+	- Retractable Pin Technique
+	- Lost Wax Casting
+ 
+
+
+
+Not needed for now:
+Design section:
+- first give models for each design: ribbed model, cylindrical, pleated (cite harvard). 
+- For each, give tools we use for designing these: the models and their iterative curvature calculations, make this model more general. Basically, describe one model to describe all of the morphologies: longitudinal and circumferential strain
+- Say, here is the process for iteratively calculating the deformations, finding what they are and then
+- For each morphology, the expression for stress is specific for each: definition of sigma as a function of pressure (specific for ribbed, pleated or cylindrical)
+- As a result, we get a specific expression for each morphology.
+	add three belt robot (nikolaus, cagdas, andy), snake for serpentine motion (cagdas);
+- Examples of Robots fabricated using this method, so finally, here are the implementations of this: 
+	We already have three types of planar manipulators in there with figures, so lets just make it fit with the added sections for the other implementations.
+
+
+
+
+Bye
+Robert

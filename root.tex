@@ -1,0 +1,109 @@
+\documentclass[letterpaper, 10 pt, twocolumn, conference]{article}
+
+\usepackage[paper=letterpaper,left=19.1mm,right=19.1mm,width=7in,top=19.1mm,bottom=19.1mm]{geometry}
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{newtxmath}
+\usepackage{times} % assumes new font selection scheme installed
+
+\usepackage{multirow}
+\usepackage{setspace} % This is used in the title page
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{amsmath, amssymb, graphics, setspace}
+\usepackage{caption}
+%\usepackage{algorithmic}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+\usepackage{longtable}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{section}{placeins}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[section]{placeins}
+
+%% END OF USER ADDED PACKAGES
+
+%% User command
+\makeatletter
+\newcommand{\algorithmicinput}{\textbf{Parameters:}}
+\newcommand{\Input}{\item[\algorithmicinput]}
+\makeatother
+
+\let\oldhat\hat
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+%to make vertical spacing of algorithm environment larger or smaller
+\algrenewcommand\alglinenumber[1]{{\sffamily\footnotesize#1}}
+\makeatletter
+%\xpatchcmd{\algorithmic}{\itemsep\z@}{\itemsep=0.7ex}{}{} %..ex value decides about the algorithm environment spacing
+\makeatother
+
+\renewcommand{\algorithmiccomment}[1]{\bgroup\hfill\scriptsize//~#1\egroup}
+
+\makeatletter
+\let\OldStatex\Statex
+\renewcommand{\Statex}[1][3]{%
+  \setlength\@tempdima{\algorithmicindent}%
+  \OldStatex\hskip\dimexpr#1\@tempdima\relax}
+\makeatother
+
+\restylefloat{figure}
+
+%% END user commands
+
+\title{\LARGE \bf
+A Recipe for Soft Planar Fluidic Elastomer Robots
+}
+
+\author{Andrew D. Marchese, Robert K. Katzschmann, and Daniela Rus% <-this % stops a space
+\thanks{Andrew D. Marchese, Robert K. Katzschmann, and Daniela Rus are with the Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute of Technology, 32 Vassar St. Cambridge, MA 02139, USA, {\tt\small \{andy, rkk, rus\}@csail.mit.edu}}%
+}
+
+\begin{document}
+
+\maketitle
+\thanks
+%\twocolumn[
+  %\begin{@twocolumnfalse}
+    \begin{abstract}
+	\textbf{
+      	\input{abstract}
+	}
+    \end{abstract}
+    %\bigskip
+  %\end{@twocolumnfalse}
+%]
+%\thispagestyle{empty}
+%\pagestyle{plain}
+
+\input{introduction}
+
+\input{related_work}
+
+\input{actuators}
+
+\input{fabrication}
+
+\input{power}
+
+\input{locomotion}
+
+\input{manipulators}
+
+%\input{capabilities}
+%\clearpage
+
+%\input{experimental_results}
+%\clearpage
+
+\input{discussions}
+
+\bibliography{root}
+
+\end{document}
