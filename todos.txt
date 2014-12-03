@@ -1,9 +1,10 @@
-ToDos:
+﻿ToDos:
 
 Not Done:
-2. Remove mention of the word planar throughout - Andy
-3. Add Design Fab related work from thesis - Andy
+
+
 4. Operating Principle make sure it is not a predictive model - Andy
+
 5. Updating plots b and c in figure 7 to change curvature to bend angle - Andy
 9. Minor Text revision Lost wax casting 
  	(changing words like 'manipulation' to 'robots' etc.) - Andy
@@ -26,6 +27,8 @@ Not Done:
 
 Done:
 1. Add to new repo - Robert
+2. Remove mention of the word planar throughout - Andy
+3. Add Design Fab related work from thesis - Andy
 6. Former section 3. Actuation renamed to Actuators -Robert
 7. Have a fabrication section taken from 3.4- Robert
 8. Initial rough Restructuring fabrication section: - Robert

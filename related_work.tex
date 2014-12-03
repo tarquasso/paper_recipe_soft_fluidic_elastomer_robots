@@ -2,76 +2,116 @@
 \label{sec:Related Work}
 
 \subsection{Actuation}
-\label{subsec:Related Work, Actuation}
-So far, the design of existing so-called "soft" manipulators, which are position-controlled and have multiple DOFs, are actually not soft.
-Originally, many rigid hyper-redundant and rigid continuum robots \citep{hannan2003kinematics} \citep{cieslak1999elephant} \citep{buckingham2002snake} used an array of servomotors or linear actuators to pull cables that moved rigid connecting plates located between body segments.
-Some soft robots have adopted a similar actuation scheme consisting of tendons pulling rigid fixtures embedded on a continuously deformable backbone as seen in the soft manipulators controlled by \citet{gravagne2002uniform}, \citet{mcmahan2005design}, and \citet{camarillo2009configuration}.
-There is an example of a position-controlled soft rubber arm using cables without rigid plates developed by \citet{wang2013visual}, but the arm consists of only one actuated segment and therefore does not require internal fixtures.
-Another common design of position controlled soft manipulators involves distributed pneumatic muscle actuators (PMAs).
-Here, PMAs are embedded throughout the robot's body.
-Notable examples include the manipulators developed by \citet{mcmahan2006field}, \citet{pritts2004design}, and \citet{kang2013design}.
-\citet{mcmahan2006field} uses 18 air muscle actuators distributed throughout four arm segments.
-\citet{pritts2004design} uses 14 McKibben actuators within two body segments.
-\citet{kang2013design} uses 24 PMAs within 6 body segments.
-Again, these designs are not entirely soft, because rigid plates are included between the segments for actuator mounting and as kinematic constraints.
+\label{subsec:RW Actuation}
+There are various approaches to actuating the body of a soft robot.
+One distinguishing feature of many soft robots is that actuators and/or power transmission systems are integrated within and distributed throughout the body.
+In the following we review four common actuator types, and these are also depicted in Figure~\ref{fig:RW actuation}.
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{figures/relatedwork/actuation.eps}
+  \caption[Common actuation approaches for soft robots.]{Common actuation approaches for soft robots. (\textbf{a}) Shape Memory Alloy (SMA) actuators \citep{seok2010peristaltic}, (\textbf{b}) Pneumatic Artificial Muscle (PAM) actuators \citep{mcmahan2006field}, (\textbf{c}) Fluidic Elastomer Actuators (FEAs) \citep{onal2011soft}, and (\textbf{d}) Fiber reinforced FEAs \citep{galloway2013mechanically}.}\label{fig:RW actuation}
+\end{figure}
 
-%\subsection{Control}
-%\label{subsec:Related Work, Control}
-%To the best of our knowledge, highly compliant robots, whose bodies are made from soft rubber, and distributed pneumatic actuators are not capable of closed-loop curvature control.
-%Prior works in this field use open-loop control, but this approach is not sufficient for providing accurate control of body segment curvature during the execution of novel tasks.
-%Most fluid-powered soft robots use open-loop valve sequencing to control body segment bending.
-%Valve sequencing means that a valve is turned on for a duration of time to pressurize the actuator and then turned off to either hold or deflate it.
-%For instance, there are soft rolling robots developed by \citet{correll2010soft}, \citet{onal2011soft}, and \citet{marchese2011soft} made of Fluidic Elastomer Actuators (FEAs) that use this control approach.
-%Also a soft snake-like robot developed by \citet{onal2013autonomous} uses this open-loop scheme to control eight distributed FEAs among four body segments to enable serpentine locomotion.
-%Again, \citet{shepherd2011multigait} use an open-loop valve controller to drive body segment bending in an entirely soft multi-gait robot and then passive control in an explosive, jumping robot \citep{shepherd2013using}.
-%\citet{martinez2013robotic} develop manually operated elastomer tentacles containing nine PneuNet actuators embedded within three body segments.
-%There is also an example of controlling a soft pneumatic inchworm-like robot using servo-controlled pressure described in \citet{lianzhi2010}.
-%Here, a PWM approach is used to drive rapid valve switching to continuously vary airflow.
-%
-%Open-loop control is also common for soft rubber robots that do not use pneumatic actuation.
-%For example, previous work on soft bio-inspired octopus-like arms developed by \citet{calisti2010study} demonstrate open-loop capabilities like grasping and locomotion \citep{laschi2012soft, calisti2011octopus}.
-%\citet{umedachi2013highly} developed a soft crawling robot that uses an open-loop SMA driver to control body bending.
-%
-%\subsection{Kinematics}
-%\label{subsec:Related Work, Kinematics}
-%Despite variability in the design of soft continuum robots \citep{gravagne2002uniform, pritts2004design, mcmahan2005design, mcmahan2006field, chen2006development, camarillo2009configuration, kang2013design, wang2013visual}, their kinematics are often represented using a piecewise constant curvature model.
-%The piecewise constant curvature assumption means each body segment of a multi-segment arm is assumed to deform with constant curvature.
-%This representation for continuum robots is reviewed by \citet{webster2010design}.
-%\citet{hannan2003kinematics} provide one of the first examples of the piecewise constant curvature model.
-%As Webster's review discusses, the generality of this modeling assumption is due to the physics behind the deformation. Specifically, \citet{gravagne2003large} and \citet{li2002design} show a moment applied by a guided cable fixed to the end of a continuum backbone produces constant curvature along the backbone.
-%\citet{jones2006practical} show that the constant curvature concept also applies to pneumatic muscle actuators bending a continuum backbone.
-%Recently, \citet{onal2011soft} show that rectangular fluidic elastomer actuators with serpentine channels deform along an arc of constant curvature.
+\subsubsection{Tendons}
+\label{subsubsec:RW Tendons}
+Originally, many hard hyper redundant and hard continuum robots \citep{cieslak1999elephant, buckingham2002snake, gravagne2002uniform, hannan2003kinematics, mcmahan2005design, camarillo2009configuration} used an array of servomotors or linear actuators to pull cables that move rigid connecting plates located between body segments.
+Some softer robots have adopted a similar actuation scheme consisting of tendons pulling rigid fixtures embedded within an elastomer body.
+For example, the elastomer based bio-inspired octopus arm developed in  \citet{calisti2010study, laschi2012soft} and \citet{calisti2011octopus} uses Shape Memory Alloy (SMA) actuation.
+Further, \citet{seok2010peristaltic} use SMA actuators within a worm-like locomotory robot (see Fig.~\ref{fig:RW actuation}a).
+The basic operating principle behind SMA technology is that nickel titanium (NiTi) wire contracts under joule heating.
+This heating is typically produced by passing electrical current through the wire.
+The contracting wire can be used as an agonist actuator, similar to the way one's bicep pulls the forearm towards the body during a curl.
+There are also soft elastomer robots that use more traditional variable tension cables.
+For example, the soft-bodied fish developed by \citet{youcef2006design} as well as the soft arm developed by \citet{wang2013visual} use this actuation approach, but these both consist of only one actuated segment.
 
-%\subsection{Planning}
-%\label{subsec:Related Work, Planning}
-%A limitation of existing approaches in solving the inverse kinematics problem for soft continuum arms is that the whole arm, in addition to the end effector's pose, is not considered in the solution.
-%Autonomous obstacle avoidance and movement through a confined environment is difficult without a computational solution for the inverse kinematics problem that is aware of the robot's whole arm in space.
-%\citet{buckingham2002snake} articulates as a distinguishing advantage of a snake-like arm, that it can potentially achieve the primary task of tip control, while meeting the secondary task of shaping the whole arm.
-%\citet{neppalli2009closed} provide a closed-form inverse kinematics solution for continuum arms, but the Jacobian-based solution only considers the endpoint of the final body segment and obstacle avoidance requires manual planning.
-%\citet{jones2006kinematics} control Air-OCTOR and OctArm using real-time Jacobian-based control over task-space, but rely on joystick control for whole arm tasks like manipulation and grasping \citep{csencsits2005user}.
-%Local optimization has shown promising results for rigid-bodied redundant manipulators \citep{nenchev1989redundancy}, but as far as we are aware of such a technique has not been used to solve the whole body manipulation problem for a soft robot.
-%Furthermore, we are not aware of any existing soft-bodied fluidic robots with highly deformable exterior envelopes \citep{correll2010soft, onal2011soft, onal2013autonomous, marchese2011soft, marchese2014design, shepherd2011multigait, shepherd2013using, martinez2013robotic} that consider whole body manipulation when moving in task-space.
-%With fewer kinematic constraints, the envelop of these soft robots expand or radially bulge at locations along the body under actuation.
-%Accordingly, whole body planning for soft and highly compliant robots must take into consideration this dynamic envelope.
-%
-%\subsection{Grasping}
-%\label{subsec:Related Work, Grasping}
-%There are several examples of soft fluidic grippers described in recent literature.
-%\citet{deimel2013compliant} developed a pneumatically actuated three-fingered hand made of reinforced silicone that is mounted to a hard robot and capable of robust grasping.
-%More recently, they have developed an anthropomorphic soft pneumatic hand capable of dexterous grasps \citep{deimel2014novel}.
-%\citet{ilievski2011soft} create a pneumatic starfish-like gripper composed of silicone membranes and demonstrate how it can grasp an egg.
-%\citet{Stokes2014hybrid} use a soft elastomer quadrupedal robot to grasp objects in a hard-soft hybrid robotic platform.
-%A puncture resistant soft pneumatic gripper is developed in \citet{shepherd2013soft}.
-%An alternative to positive pressure actuated soft grippers is the robotic gripper based on the jamming of granular material developed in \citet{brown2010universal}.
-%Perhaps the most related soft pneumatic actuator design to our current work is the Pneu-net designs by \citet{mosadegh2014pneumatic} and by \citet{polygerinos2013towards}.
-%These finger-like actuators can deform with minimal volume change and leverage a pleated channel morphology.
+\subsubsection{Pneumatic Artificial Muscles}
+\label{subsubsec:RW PMA}
+Another common actuation scheme for soft robots involves distributed Pneumatic Artificial Muscle (PAM) actuators (see Fig.~\ref{fig:RW actuation}b) also known as the McKibben actuator.
+A PAM is fundamentally composed of an inflatable elastic tube surrounded by a braided mesh.
+Depending on the weave pattern of the braided mesh the actuator can be designed to contract or extend under input pressure.
+Typically these actuators are operated with driving pressures between 50 and 100 psi.
+These actuators have been used and studied extensively in \citet{chou1996measurement, tondu2000modeling} and \citet{daerden2002pneumatic}.
+Notable semi-soft robots using PAMs include \citep{mcmahan2006field, pritts2004design} and \citet{kang2013design}.
 
-\subsection{Soft-bodied Robots}
-\label{subsec:Related Work, Soft Robots}
-More generally, the literature has several examples of soft pneumatic elastomer robots.
-Many of these robots use open-loop controllers.
-There are soft fluid-powered rolling robots \citep{correll2010soft, onal2011soft, marchese2011soft}.
-Also, there are soft-bodied robotic fish powered by pneumatics \citep{marchese2014autonomous} and by hydraulics \citep{katzschmann2014hydraulic}.
-There are soft-legged pneumatic walkers \citep{shepherd2011multigait, tolley2014resilient}, explosive jumpers \citep{shepherd2013using}, and tentacles \citep{martinez2013robotic}.
+\subsubsection{Fluidic Elastomer Actuators}
+\label{subsubsec:RW FEA}
+A softer alternative is the Fluidic Elastomer Actuator (FEA), which is used predominantly throughout this paper (see Fig.~\ref{fig:RW actuation}c).
+The FEA is a bending actuator composed of low durometer rubber and driven by relatively low-pressure fluid, 3 to 8 psi.
+Its basic structure consists of two soft elastomer layers separated by a flexible but inextensible constraint.
+Each of these elastomer layers contains embedded fluidic channels.
+By pressurizing the fluid entrapped in these channels, stress is induced within the elastic material producing localized strain. This strain in combination with the relative inextensibility of the constraint produces body segment bending.
+FEAs can be powered pneumatically or hydraulically.
 
+Perhaps the earliest application of pneumatically actuated elastomer bending segments to robotics was by \citet{suzumori1992applying}.
+Here fiber-reinforced Flexible Microactuators (FMAs) were developed and shown viable in a manipulator and multi-fingered hand.
+Recently, these concepts have been extended and developed into the FEA and used to build a variety of soft mechanisms  \citep{shepherd2011multigait, ilievski2011soft, morin2012camouflage, martinez2013robotic, marchese2014autonomous, marchese2014design, marchese2014whole, katzschmann2014hydraulic, tolley2014untethered, katzschmann2015autonomous, marchese2015design, marchese2015control, marchese2015dynamics}.
+and soft robotic systems
+\citep{onal2011soft, marchese2011soft, onal2013autonomous, marchese2014autonomous, marchese2014design, marchese2014whole, katzschmann2014hydraulic, tolley2014untethered, tolley2014resilient, katzschmann2015autonomous, marchese2015design, marchese2015control, marchese2015dynamics}.
+Actuators within these mechanisms and robots use elastomers of varying stiffness as well as cloth, paper, plastics, and even stiffer rubbers for their constraint layers.
+Furthermore, \citet{polygerinos2013towards} and \citet{mosadegh2014pneumatic} have investigated more elaborate channel designs in order to reduce elastomer strain.
+
+There are also less flexible, fiber-reinforced FEAs (see Fig.~\ref{fig:RW actuation}d) that occupy the soft actuator space between purely elastomer FEAs and PAMs.
+These actuators operate with driving pressures of between 25 and 35 psi and can accordingly apply higher forces which is an advantage for many applications.
+There are several notable examples of fiber-reinforced FEAs in the literature \citet{suzumori1992applying, suzumori2007bending, bishop2012design, galloway2013mechanically, deimel2013compliant, deimel2014novel} and \citet{park2014design}.
+
+\subsection{Design Tools}
+\label{subsec:RW Design Tools}
+Design tools for soft robots are limited with respect to the availability of design tools for more traditional rigid-body robots.
+\citet{suzumori2007bending} use Finite Element Modeling (FEM) to analyze the bending of fiber reinforced pneumatic tube-like actuators.
+Specifically, hyperelastic material models are used to capture the nonlinear material properties of rubber, line elements are used to represent radial inextensibility constraints due to fiber reinforcement, and the simulation is performed using the software MARC.
+Outside of this example, the community has generally found that iterative nonlinear finite element solvers are limited to small deformations and of limited use when modeling very soft nonlinear materials \citep{lipson2014challenges}.
+VoxCAD and the Voxelyze physics engine, as used in \citet{cheney2013unshackling} and \citet{lehman2011evolving} and reviewed by \citet{lipson2014challenges}, are simulation tools for very soft nonlinear materials.
+These tools use the concept of nonlinear relaxation to effectively perform physically correct particle-based material simulation.
+They have the advantage of allowing the user to individually set the local material properties of each particle.
+The disadvantage is that many physical parameters of active and passive material types must be experimentally derived.
+
+\subsection{Fabrication}
+\label{subsec:RW Fabrication}
+\citet{cho2009review} review several manufacturing processes for soft biomimetic robots.
+The vast majority of soft elastomer robots rely on the processes of soft lithography \citep{xia1998soft} and/or shape deposition manufacturing \citep{cham2002fast}.
+Specifically, for soft fluidic elastomer robots this fabrication process generally consists of three steps as shown in Figure~\ref{fig:RW fabrication}: (1) Two elastomer layers are molded through a casting process using pourable silicone rubber. The mold used for the outer layer contains a model of the desired channel structure. When cast, the outer layer contains a negative of this channel structure. The mold used for the constraint layer may contain fiber, paper, or a plastic film to produce the the inextensibility property required for actuation. When the elastomer is poured, this material is effectively embedded within the constraint layer.
+(2) The two layers are cured, removed from their molds, and their joining faces are dipped in a thin layer of uncured elastomer.
+(3) Lastly, the two layers are joined and cured together.
+The primary limitation of this soft lithography fabrication process is that it is fundamentally 2.5D, meaning that the robots are largely constrained to a planar morphology.
+This process limits a soft robot's ability to achieve amorphous, 3D forms.
+Additionally, \citet{umedachi2013highly} provide the first SMA actuated soft robot fabricated using 3D printing.
+However, although 3D printing allows printing flexible materials in amorphous forms, these materials are relatively brittle with respect to casted rubbers and are not well-suited for FEAs.
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{figures/relatedwork/fabrication.eps}
+  \caption[Soft lithography fabrication process.]{Soft lithography fabrication process for soft fluidic elastomer robots. Reproduced with permission from \citet{onal2012modular}.}\label{fig:RW fabrication}
+\end{figure} 
+
+\subsubsection{Soft Locomotory Robots}
+\label{subsubsec:RW Land}
+In the past several years soft roboticists have made many notable low durometer rubber robots intended for land and water locomotion.
+For example, rolling belts have been produced by \citet{correll2010soft} and \citet{marchese2011soft}.
+\citet{trimmer2006caterpillar} and \citet{umedachi2013highly} emulated the peristaltic locomotion of caterpillars. \citet{shepherd2011multigait} developed a multigait walking robot, and \citet{shepherd2013using} developed a jumping robot powered by combustion.
+However, a limitation of the aforementioned locomotory robots is that they require an electrical and/or pneumatic tether.
+Soft actuation systems, especially fluidic actuation systems, typically require significant supporting hardware and often limit soft locomotory robots from being self-contained.
+That said, there are a few examples of untethered soft robots:
+\citet{onal2011soft} created a rolling robot, \citet{onal2013autonomous} emulated the serpentine locomotion of snakes, and \cite{tolley2014resilient} developed a quadrupedal walking robot; these are all soft-bodied fluidic elastomer systems.
+\citet{seok2010peristaltic} realize peristaltic locomotion with a self-contained SMA-based inchworm.
+However, a limitation of all these untethered soft platforms is that performance is severely limited with respect to their rigid-bodied counterparts, and this limitation is due to the constraints imposed by bringing onboard all supporting hardware.
+More specifically, they all exhibit locomotory speeds of between 0.008 and 0.07 bodylengths per second.
+Recently, \citet{marchese2014autonomous} developed an autonomous soft robotic fish that can swim at speeds of 0.4 bodylengths per second.
+
+\subsubsection{Soft Continuum Manipulators}
+Recently, continuum manipulators composed from soft elastic material have been developed.
+These soft rubber manipulators can be categorized under two primary morphologies.
+First, there are tendon driven manipulators consisting of variable length tendons, typically cables or shape memory alloy wire (see Section \ref{subsubsec:RW Tendons}), embedded within and anchored to portions of a soft silicone arm.
+For example, previous work on soft bio-inspired octopus-like arms developed by \citet{calisti2010study} used tendons and demonstrated capabilities like grasping and locomotion \citep{laschi2012soft, calisti2011octopus}.
+Also, \citet{wang2013visual} developed a cable driven soft rubber arm consisting of one large actuated segment that bends bi-directionally.
+Lastly, \citet{mcevoy14shape} and \citet{mcevoy2014thermoplastic} used a programmable stiffness spine in conjunction with tendons to achieve shape change in a soft rubber arm.
+The second morphology uses fluidic elastomer actuators (see Section \ref{subsubsec:RW FEA}) distributed among the manipulator's soft body segments.
+The primary advantages of using fluidic actuation for soft continuum manipulators is that this energy transmission system: (i) can be lightweight making for easy integration into distal locations of the body, (ii) conforms to the time varying shape of the manipulator, and (iii) does not require rigid components to implement.
+There are several examples of soft fluidic grippers described in recent literature.
+\citet{deimel2013compliant} developed a pneumatically actuated three-fingered hand made of fiber reinforced silicone that is mounted to a hard industrial robot and capable of robust grasping.
+More recently, they have used similar fiber reinforced actuation technology to develop an anthropomorphic soft pneumatic hand capable of dexterous grasps \citep{deimel2014novel}.
+Additionally, we have previously shown planar manipulation is possible with an entirely soft robot. That is, a six-segment planar fluidic elastomer robot can be precisely positioned using a closed-loop kinematic controller \citep{marchese2014design, marchese2014whole, katzschmann2015autonomous}.
+\citet{ilievski2011soft} created a pneumatic starfish-like gripper composed of FEAs and demonstrated it grasping an egg.
+\citet{Stokes2014hybrid} used an FEA-based elastomer quadrupedal robot to grasp objects in a hard-soft hybrid robotic platform.
+A puncture resistant soft pneumatic gripper is developed in \citet{shepherd2013soft}.
+An alternative to positive pressure actuated soft grippers is the robotic gripper based on the jamming of granular material developed in \citet{brown2010universal}.
+Another relevant piece of work is the manually operated 3D elastomer tentacles developed by \citet{martinez2013robotic} containing 9 pneumatic crescent-shaped channels embedded within 3 body segments.
 
