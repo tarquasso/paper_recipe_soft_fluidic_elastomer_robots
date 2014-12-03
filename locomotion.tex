@@ -5,29 +5,50 @@ Specifically, in this section we detail how soft robotic fish can be composed by
 
 \subsection{Pneumatic Fish}
 \label{subsec:Locomotion, Pneumatic Fish}
+The soft pneumatic fish~\cite{marchese2014autonomous} with a single segment actuator is shown as a complete system in Figure~\ref{fig:pneumaticfish_system} and performing an escape response in Figure~\ref{fig:pneumaticfish_escape}.
 
-%\begin{figure}[htb]
-%        \centering
-%        \begin{subfigure}[b]{\columnwidth}
-%            \centering
-%            \includegraphics[width=0.9\columnwidth]{Figures/manipulators/ribbed_manipulator}
-%            \caption{}
-%            \label{fig:ribbed_manipulator_design}
-%        \end{subfigure}\\
-%        \begin{subfigure}[b]{\columnwidth}
-%            \centering
-%            \includegraphics[width=0.9\columnwidth]{Figures/manipulators/ribbed_manipulator_real}
-%            \caption{}
-%            \label{fig:ribbed_manipulator_real}
-%        \end{subfigure}%
-%        \caption[A ribbed soft manipulator prototype.]{A ribbed soft manipulator prototype. (\textbf{a}) The arm is composed of homogeneous and independently actuated ribbed segments (e). The base of the arm's first segment is fixed (a) and the end of its last segment is the end-effector (c). Markers (b) identify the endpoints of each segment and ball transfers (d) mitigate friction. (\textbf{b}) Photographs of the ribbed manipulator prototype.}
-%\end{figure}
+\begin{figure}[htb]
+        \centering
+        \begin{subfigure}[b]{\columnwidth}
+            \centering
+            \includegraphics[width=0.9\columnwidth]{Figures/locomotion/pneumaticfish_system.png}
+            \caption{}
+            \label{fig:pneumaticfish_system}
+        \end{subfigure}\\
+        \begin{subfigure}[b]{\columnwidth}
+            \centering
+            \includegraphics[width=0.9\columnwidth]{Figures/locomotion/pneumaticfish_escape_half.pdf}
+            \caption{}
+            \label{fig:pneumaticfish_escape}
+        \end{subfigure}%
+        \caption[Pneumatic Fish.]{Soft Pneumatic Fish: System Overview (\textbf{a}) and fish performing an escape response (\textbf{b}).}
+\end{figure}
+
+
 
 \subsection{Hydraulic Fish}
 \label{subsec:Locomotion, Hydraulic Fish}
+The soft hydraulic fish~\cite{katzschmann2014hydraulic} with a single ribbed actuator is shown as a complete system in Figure~\ref{fig:hydraulic_fish_system_overview}. A closed-up view is shown in Figure~\ref{fig:hydraulic_fish_yaw} and the 3d swimming capabilities are shown in Figure~\ref{fig:hydraulic_fish_all_motions}.
 
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=\columnwidth]{Figures/manipulators/cylindrical_manipulator_real}
-%\caption[A cylindrical soft manipulator prototype.]{A cylindrical soft manipulator prototype with and without a pleated finger-like gripper.} \label{fig:cylindrical_manipulator}
-%\end{figure}
+\begin{figure}[htb]
+        \centering
+        \begin{subfigure}[b]{0.48\columnwidth}
+            \centering
+           \includegraphics[width=1\columnwidth]{figures/locomotion/hydraulic_fish_system_overview.pdf} 
+           \caption{}
+            \label{fig:hydraulic_fish_system_overview}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\columnwidth}
+            \centering
+            \includegraphics[width=1\columnwidth]{figures/locomotion/hydraulic_fish_yaw.png}
+            \caption{}
+            \label{fig:hydraulic_fish_yaw}
+        \end{subfigure}\\
+        \begin{subfigure}[b]{1\columnwidth}
+            \centering
+            \includegraphics[width=1\columnwidth]{figures/locomotion/hydraulic_fish_all_motions.pdf}
+            \caption{}
+            \label{fig:hydraulic_fish_all_motions}
+        \end{subfigure}%
+        \caption[Hydraulic soft robotic fish]{Hydraulic soft robotic fish: System schematic (\textbf{a}), underwater swimming motion (\textbf{b}), and example of continuous forward swimming, yaw motion, and diving (\textbf{c}).}
+\end{figure}
