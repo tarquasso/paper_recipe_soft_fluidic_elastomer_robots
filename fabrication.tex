@@ -4,10 +4,26 @@ Three distinct fabrication techniques for soft actuators are show-cased with the
 Table~\ref{tab:MachineTools} contains the superscript references to machine tools and materials used.
 
 	
-\subsection{Soft Lithography with Heterogenous Embeddings}
-\label{subsec:Fabrication, Soft Lithography with Heterogenous Embeddings}
-Soft lithography with heterogeneous embedding as a fabrication technique is shown for a ribbed actuator morphology. The ribbed manipulator is composed of six actuator segments and is fabricated from various soft and semi-soft materials.
-Seven constraint supports (Fig.~\ref{fig:ribbed fab process}d) are 3D printed$^1$ and placed into a constraint layer mold (Fig.~\ref{fig:ribbed fab process}f), which is also 3D printed.
+\subsection{Lamination Casting with Heterogenous Embeddings}
+\label{subsec:Fabrication, Lamination Casting with Heterogenous Embeddings}
+lamination-based casting with heterogeneous embeddings is a fabrication technique that extends current soft lithography casting processes.
+%
+As detailed in Section~\ref{subsec:RW Fabrication} and in Figure~\ref{fig:RW fabrication}, the outer layers of a soft robot are often cast separately using soft lithography techniques to inlay channel structures. Then, these layers are laminated together with a constraint layer to form the actuator.
+%
+To power actuation, supply lines are pierced through the actuator's side wall and run external to the mechanism.
+%
+This approach can be prohibitive in that it creates an unreliable pneumatic interface between supply lines and actuated channels and also these external supply lines can inhibit the robot's movement or otherwise obstruct it from completing its intended function.
+% 
+By embedding heterogeneous components within the elastomer layers as they are cast, we address both of these challenges.
+%
+In this section, we show how the idea of soft lithography can be combined with embedding heterogenous components and that it is well-suited for realizing the ribbed body segment morphology.
+%
+Specifically, we illustrate this fabrication process in the context of creating both a soft ribbed manipulator and soft ribbed fish robot.
+
+A ribbed manipulator, like that detailed in Section~\ref{subsec:Manipulators, Ribbed}, can be fabricated using lamination-based casting with heterogeneous embeddings.
+%
+The specific approach for fabricating a six segment manipulator is illustrated in Figure~\ref{fig:ribbed fab process}.
+Here, seven constraint supports (Fig.~\ref{fig:ribbed fab process}d) are 3D printed$^1$ and placed into a constraint layer mold (Fig.~\ref{fig:ribbed fab process}f), which is also 3D printed.
 The constraint film (Fig.~\ref{fig:ribbed fab process}c) is cut from a thin acetal sheet$^8$ using a laser$^2$ and inserted through the aforementioned supports.
 Above and below the constraint film, eight pieces of silicone tubing (Fig.~\ref{fig:ribbed fab process}a) are threaded through the supports.
 Silicone rubber$^3$ is then mixed and poured into the constraint layer mold, immersing tubing, film, and supports in a layer of elastomer to create the composite constraint layer (Fig.~\ref{fig:ribbed fab process}g).
@@ -16,19 +32,36 @@ Once cured, small holes are created in the constraint layer to pierce the embedd
 Elastomer pieces containing channels (Fig.~\ref{fig:ribbed fab process}b) are casted and cured separately using a similar molding technique.
 Those cured elastomer pieces (Fig.~\ref{fig:ribbed fab process}b) are then carefully attached to both faces of the constraint layer using a thin layer of silicone rubber.
 Lastly, the printed feet (Fig.~\ref{fig:ribbed fab process}e) are attached to the constraint supports (Fig.~\ref{fig:ribbed fab process}d) to create an attachment point for ball transfers (Fig.~\ref{fig:ribbed_manipulator_design}d).
-These mechanisms prevent the arm from tipping and help constrain the arm's motion to the X-Y plane.
-
+These mechanisms help constrain the arm's motion to a plane.
 \begin{figure}[htb]
 \includegraphics[width=\columnwidth]{figures/fabrication/fab_ribbed_process.eps}
-\caption[Fabrication process for a ribbed manipulator morphology]{Fabrication process for a ribbed manipulator morphology: silicone tubing (a), elastomer pieces containing channels (b), constraint film (c), constraint supports (d), feet (e), constraint layer mold (f), and composite constraint layer (g).}
+\caption[Fabrication process for a ribbed manipulator morphology]{Fabrication process for a ribbed manipulator: silicone tubing (a), elastomer pieces containing channels (b), constraint film (c), constraint supports (d), feet (e), constraint layer mold (f), and composite constraint layer (g).}
 \label{fig:ribbed fab process}
+\end{figure}
+
+The anatomically proportioned body of a fish-like robot developed by the authors in \citet{marchese2014autonomous} and detailed in Section~\ref{subsec:Locomotion, Pneumatic Fish} was also fabricated using a similar lamination-based casting process, and this process is detailed in Figure~\ref{fig:ribbed fab process_fish}.
+Supply lines that connect the posterior actuator pair are embedded within the body during step 2 (Fig.~\ref{fig:ribbed fab process_fish}-2).
+\begin{figure}[htb]
+\includegraphics[width=\columnwidth]{figures/fabrication/fab_ribbed_process_fish.eps}
+\caption{Illustration of the soft fish body fabrication process. First, two halves of the body (\textbf{1a}), a connector piece (\textbf{1b}), and a constraining layer (\textbf{1c}) are all cast from silicone using two-part molds. Next, these four pieces are sequentially bonded together using a thin layer of silicone (\textbf{2}). Lastly, once cured the fish body is ready for operation (\textbf{3}). This figure and caption are reproduced with permission from \citet{marchese2014autonomous}.}
+\label{fig:ribbed fab process_fish}
 \end{figure}
 
 \subsection{Retractable Pin Casting}
 \label{subsec:Fabrication, Retractable Pin Casting}
-The cylindrical manipulator is fabricated through a casting process that uses pourable silicone rubber$^{3,5}$ and 3D printed molds$^1$.
-Figure~\ref{fig:cylindrical_fab} details this process.
+Retractable pin casting allows the relatively simple channel structure of the cylindrical body segment to be cast without lamination.
+%
+This fabrication process is advantageous because it eliminates the rupture-prone seems between the channels and constraint layer seem in the ribbed morphology fabricated through lamination-based casting.
+%
+Additionally, retractable pin casting is well-suited for the modular fabrication of multi-body soft robots.
+%
+Here, segments are individually cast and then concatenated together to form the robot.
+%
+Specifically, in this section we demonstrate retractable pin casting in the context of fabricating a cylindrical manipular.
 
+
+A cylindrical manipulator, like that detailed in Section~\ref{subsec:Manipulators, Cylindrical}, is fabricated through a retractable-pin casting using pourable silicone rubber$^{3,5}$ and 3D printed molds$^1$.
+Figure~\ref{fig:cylindrical_fab} details this process.
 First, each body segment is independently fabricated in steps 1-3 and later these segments are joined serially to form the arm in steps 4 and 5.
 To start, a four piece mold is printed.
 The mold is then poured in two steps.
@@ -36,7 +69,6 @@ In step 1, a low elastic modulus rubber$^3$ is mixed, degassed in a vacuum$^4$, 
 The mold's outer piece, one half of it is shown in \emph{green}, functions to form the segment's exterior.
 Metal rods shown in \emph{pink} are inserted into the mold and are held in place by the \emph{orange} bottom piece of the mold.
 These rods will form the cavities for the segment's two lateral fluidic actuation channels.
-
 After the outer layer has cured, the \emph{red} rigid sleeve is removed in step 2 from the extruded feature of the \emph{orange} bottom piece of the mold.
 This produces a cavity into which a slightly stiffer rubber$^5$ is poured, forming the segment's partially constraining inner layer shown in \emph{cyan}.
 The extruded feature of the \emph{orange} bottom piece, shown by its \emph{orange} end tip, functions to produce the segment's hollow interior core.
@@ -55,25 +87,22 @@ Lastly, in step 5 multiple body segments are attached at their endplates using t
 
 \subsection{Lost Wax Casting}
 \label{subsec:Fabrication, Lost Wax Casting}
-Existing soft manipulators are produced through a multi-step lamination process, which produces seams and is easy to delaminate.
-This limits their range of applications and lifetime.
-By abandoning the need for a lamination process, arbitrary shaped internal channels can be achieved to enable a wider range of applications.
+As mentioned, existing soft robots are often produced through a multi-step lamination process, which produces seams and is prone to delamination.
+By abandoning the need for lamination, the retractable pin fabrication process enables seamless channel structures; however, the channel structures are limited to a relatively simple shape.
+%
 For these reasons, we introduce lost-wax casting as part of the fabrication process for soft actuators.
-%The actuated cavities of the soft actuator are achieved by using bees-wax core$^{8}$, pourable silicone rubber$^{2,4,7}$ and 3D printed molds$^1$.
+%
+With this, arbitrarily shaped internal channels can be achieved to enable a wider range of applications.
+%
+As examples, in this section we fabricate a pleated uni-directional gripper and a ribbed soft fish tail using the lost-wax approach.
 
-As examples, we fabricate a pleated uni-directional gripper and a ribbed soft fish tail using the lost-wax approach.
-
-\subsubsection{Pleated Gripper}
-\label{subsubsec:Fabrication, Lost Wax Casting, Pleated Gripper}
-The complete fabrication process for the pleated manipulator consists of eight steps that are depicted in Figure~\ref{fig:pleated_fab} and a final concatenation step.
-
+The complete fabrication process for a pleated actuator consists of eight steps that are depicted in Figure~\ref{fig:pleated_fab}.
 \begin{figure}[htb]
 \centering
    \includegraphics[width=\columnwidth]{figures/fabrication/fab_pleated_process.pdf}
       \caption[Fabrication process for the pleated actuator morphology]{Fabrication process for the pleated actuator morphology: (\textbf{A}) Pour and cure a rubber mold, (\textbf{B}) pour wax core with embedded supportive rod, (\textbf{C}) combine bottom mold, top mold and wax core using pins, (\textbf{D}) pour rubber into assembled mold, (\textbf{E}) pour stiffer rubber on top of the cured actuator to form a constraint layer, (\textbf{F}) remove cured actuator from mold, (\textbf{G}) melt out wax core from the actuator using an oven, and (\textbf{H}) add silicone tubing and plug using silicone sealant.}
       \label{fig:pleated_fab}
 \end{figure}
-
 In step (A), harder silicone rubber$^{10}$ is poured into a mold, which contains a 3D printed model of the wax core.
 In preparation for step (B), the model is removed and the rubber mold is left inside the outer mold.
 Next, a rigid rod or tube, for example made of carbon fiber$^{12}$, is used as a supportive inlay for the wax core.
@@ -93,32 +122,27 @@ In step (F), the cured actuator is removed from the mold.
 In step (G), most of the wax core is melted out by placing the cured actuator into an oven in an upright position.
 After this, remaining wax residues are cooked out in a boiling water bath.
 Finally, in step (H) a silicone tube$^9$ and a piece of silicone cord$^13$ get covered with silicone adhesive$^6$ and are inserted into the front and back holes, respectively.
+The actuator can be used as a unidirectional gripper (see Figure~\ref{fig:cylindrical_design}) or as one agonist actuated segment within a multiple body manipulator (see Section~\ref{subsec:Manipulators, Pleated}).
 
-Lastly, the actuator can be used as a unidirectional gripper or as one agonist side segment of a multiple body manipulator, where each segment can be actuated bidirectionally; see Section~\ref{subsec:Manipulators, Pleated}.
-
-\subsubsection{Ribbed Hydraulic Fish Tail}
-\label{subsubsec:Fabrication, Lost Wax Casting, Ribbed Hydraulic Fish Tail}
-The actuated cavities of the hydraulic fish tail are also achieved by lost-wax casting. The fabrication process is depicted in Figure~\ref{fig:fabrication}.
+The actuated body of the hydraulic fish detailed in Section~\ref{subsec:Locomotion, Hydraulic Fish} is also produced via lost-wax casting. The fabrication process is depicted in Figure~\ref{fig:fabrication}.
 \begin{figure}
         \centering
          \includegraphics[width=0.99\columnwidth]{figures/fabrication/fab_hydraulic_fish_tail.pdf}
          \caption[Fish tail fabrication process]{Fish tail fabrication process: (\textbf{A}) Pour and cure a rubber mold, (\textbf{B}) pour wax cores, (\textbf{C}) combine head constraint, center constraint and wax cores with tail mold halves, (\textbf{D}) pour rubber mixed with glass bubbles into assembled tail mold, (\textbf{E}) using an oven melt out wax core from the cured fish tail, and (\textbf{F}) cook out remaining wax to create desired actuator cavities.}\label{fig:fabrication}
 \end{figure}
-
 In step (A), the rubber mold is poured and cured inside an assembly consisting of an outer mold with lid and a model for the core inside of it.
-In preparation for step (B), the lid and the model core are removed and the rubber mold is left inside the outer mold. 
+In preparation for step (B), the lid and the model core are removed and the rubber mold is left inside the outer mold.
 The rubber mold receives a small carbon fiber tube as an inlay in its center cavity.
 This ensures that the wax core does not break when being removed from the rubber mold.
-Mold release spray is applied to the silicone rubber mold to ease the wax core removal process. 
-The wax is heated up until it becomes fully liquefied. 
+Mold release spray is applied to the silicone rubber mold to ease the wax core removal process.
+The wax is heated up until it becomes fully liquefied.
 The assembly of rubber mold and outer mold is heated up for a few minutes to the same temperature as the wax.
 Using a syringe, the liquid wax is injected into the assembly.
 Within a few minutes, the injected wax will start to solidify and significantly shrink in volume; this is counteracted by injecting more hot wax into the solidifying wax core during the cool down.
-In step (B), the wax core is first allowed to completely cool down, then it is released from the mold. 
-In step (C), a head constraint, a center constraint, and two wax cores are assembled together inside the tail mold halves using spacers, positioning pins and screws. 
+In step (B), the wax core is first allowed to completely cool down, then it is released from the mold.
+In step (C), a head constraint, a center constraint, and two wax cores are assembled together inside the tail mold halves using spacers, positioning pins and screws.
 In step (D), a mix of silicone rubber with glass bubbles is poured into the tail assembly and allowed to cure.
-In step (E), most of the wax core is melted out by placing the fish tail in an upright position into an oven. Finally, in step (F) the remaining wax residues are cooked out in a boiling water bath. 
-
+In step (E), most of the wax core is melted out by placing the fish tail in an upright position into an oven. Finally, in step (F) the remaining wax residues are cooked out in a boiling water bath.
 
 \begin{table}[htb]
 \caption{Commercially Available Tools and Equipment}

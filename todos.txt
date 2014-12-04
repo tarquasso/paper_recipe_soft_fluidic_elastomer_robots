@@ -3,25 +3,20 @@
 Not Done:
 
 
-4. Operating Principle make sure it is not a predictive model - Andy
 
-5. Updating plots b and c in figure 7 to change curvature to bend angle - Andy
-9. Minor Text revision Lost wax casting 
- 	(changing words like 'manipulation' to 'robots' etc.) - Andy
+
+-------------------- Power Section --------------
 10. Modify Power Section so that it talks about: 
 	Transmission medium: pneumatic/hydraulics, allowing any type of liquids. 
 	Architecture: Closed/Open circuit. - Andy
 12. Add short explanations to section 5 for the new figures and adding of 
 	Design Constraints for Locomotion/ Design Constraints for portability - Andy  
+
+
+-------------------- Loco, Manip, and Disc Sections --------------
+19. Add schematic picture to existing figure in ’Locomotion' section for pneumatic fish - Andy
 14. Add 3d arm implementation. to section Manipulators - Andy
 15. Review the discussion section - Robert
-16. Rewrite specifics of fabrication section so it does not rely on the multi segment 
-	manipulator section, which was previously before and now is after the fab section - Robert
-17. add pneumatic fish figures to fabrication section
-	 before the ribbed manipulator fab description - andy
-19. Add schematic picture to existing figure in ’Locomotion' section for pneumatic fish - Andy
-20. Add description to ribbed fish tail design figure and to the actuator section affecting that figure - Robert
-21. Change cover picture so it contains also the 3d arm and the fish robot - Andy
 
 
 
@@ -29,6 +24,11 @@ Done:
 1. Add to new repo - Robert
 2. Remove mention of the word planar throughout - Andy
 3. Add Design Fab related work from thesis - Andy
+4. Operating Principle make sure it is not a predictive model - Andy
+5. Updating plots b and c in figure 7 to change curvature to bend angle - Andy
+
+**I think we should skip adding fish to actuators section** -> 20. Add description to ribbed fish tail design figure and to the actuator section affecting that figure - Robert
+
 6. Former section 3. Actuation renamed to Actuators -Robert
 7. Have a fabrication section taken from 3.4- Robert
 8. Initial rough Restructuring fabrication section: - Robert
@@ -40,6 +40,14 @@ Done:
 	-> Adding text and pictures for those robots  - Robert
 13. Make old 3.3 become 6. Manipulators (Multi segment manipulators section), - Robert
 18. add hydraulic fish figures to fabrication section after pleated gripper section - Robert
+21. Change cover picture so it contains also the 3d arm and the fish robot - Andy
+-------------------- Fab Section --------------
+16. Rewrite specifics of fabrication section so it does not rely on the multi segment 
+	manipulator section, which was previously before and now is after the fab section - Robert
+17. add pneumatic fish figures to fabrication section
+	 before the ribbed manipulator fab description - andy
+9. Minor Text revision Lost wax casting 
+ 	(changing words like 'manipulation' to 'robots' etc.) - Andy
 
 
 Not needed for now:
