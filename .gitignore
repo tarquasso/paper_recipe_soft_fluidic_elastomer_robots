@@ -1,2 +1,17 @@
 *-eps-converted-to.pdf
 TSWLatexianTemp*
+*.bak
+figures/relatedwork/ArcParams.eps
+figures/relatedwork/locomotion.eps
+figures/relatedwork/locomotion.jpg
+figures/relatedwork/locomotion.psd
+figures/relatedwork/manipulation.eps
+figures/relatedwork/manipulation.jpg
+figures/relatedwork/manipulation.psd
+root.log
+root.out
+root.pdf
+texput.log
+root.aux
+root.bbl
+root.blg

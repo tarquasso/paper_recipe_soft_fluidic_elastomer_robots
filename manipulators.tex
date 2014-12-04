@@ -6,11 +6,11 @@ Specifically, in this section we detail how multi-segment manipulators can be co
 \subsection{Ribbed}
 \label{subsec:Manipulators, Ribbed}
 Structurally, a ribbed arm is composed of serially concatenated, homogeneous ribbed body segments.
-In this work, the manipulator's reachable envelope is constrained to the x-y plane.
+%In this work, the manipulator's reachable envelope is constrained to the x-y plane.
 %, as shown in Section~\ref{sec:System Overview}.
 By volume, over ninety-seven percent of the ribbed manipulator is soft silicone rubber, excluding the feet.
-This manipulator is depicted in Figure~\ref{fig:ribbed_manipulator_design} and can theoretically be composed of any number of the aforementioned ribbed segments (Fig.~\ref{fig:ribbed_manipulator_design}e).
-Practically, we have constructed a six-segment prototype (Fig. \ref{fig:ribbed_manipulator_real}).
+This manipulator is depicted in Figure~\ref{fig:ribbed_manipulator_design} and was initially developed in \citet{marchese2014design}.
+The manipulator can theoretically be composed of any number of the aforementioned ribbed segments (Fig.~\ref{fig:ribbed_manipulator_design}e), but practically, we have constructed a six-segment prototype (Fig. \ref{fig:ribbed_manipulator_real}).
 All twelve fluidic transmission lines as well as channel-to-supply interfaces are embedded within the manipulator's center layer.
 Markers are located at the interface between segments (Fig.~\ref{fig:ribbed_manipulator_design}b), making segment endpoints identifiable to an external localization system.
 The starting point of the arm's first segment (Fig.~\ref{fig:ribbed_manipulator_design}a) is grounded to the platform on which the arm moves and we refer to this as the base.
@@ -36,7 +36,7 @@ In many experiments conducted throughout this work, the pose of the arm's end-ef
 
 \subsection{Cylindrical}
 \label{subsec:Manipulators, Cylindrical}
-We can also compose a manipulator from cylindrical fluidic elastomer segments, as shown in Figure~\ref{fig:cylindrical_manipulator}.
+We can also compose a manipulator from cylindrical fluidic elastomer segments, as shown in Figure~\ref{fig:cylindrical_manipulator} and initially developed in \citet{marchese2014whole}.
 Just as in the ribbed composition, cylindrical segments are joined end-to-end.
 Here, fluid transmission lines are passed through the manipulator's hollow center.
 This feature not only facilitates segment concatenation, but also allows for modular composition of a manipulator, because transmission lines are not permanently embedded within the elastomer.
@@ -45,7 +45,15 @@ No other materials are used, except for the attached ball transfers to mitigate 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=\columnwidth]{Figures/manipulators/cylindrical_manipulator_real}
-\caption[A cylindrical soft manipulator prototype.]{A cylindrical soft manipulator prototype with and without a pleated finger-like gripper.} \label{fig:cylindrical_manipulator}
+\caption[A cylindrical planar soft manipulator prototype.]{A planar cylindrical soft manipulator prototype with and without a pleated finger-like gripper.} \label{fig:cylindrical_manipulator}
+\end{figure}
+
+Additionally, using four actuated channels per body segment, we have created a multi-segment spatial cylindrical manipulator in \citet{marchese2015design}. This enables three-dimensional end-effector positioning and is shown in Figure~\ref{fig:spatial_cylindrical_manipulator}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.3\columnwidth]{Figures/manipulators/CshapeTight.eps}
+\caption[A cylindrical spatial soft manipulator prototype.]{A spatial cylindrical soft manipulator prototype.} \label{fig:spatial_cylindrical_manipulator}
 \end{figure}
 
 \subsection{Pleated}
@@ -56,7 +64,6 @@ The fluid transmission lines are passed through along the central axis of the se
 A supportive hollow profile can be added to combine two segments.
 This pleated design allows for modular composition of a manipulator, because transmission lines are not permanently embedded within the elastomer.
 Additionally, this type of manipulator is, like the cylindrical manipulator, composed entirely of soft silicone rubber.
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=\columnwidth]{Figures/manipulators/pleated_manipulator_real}
