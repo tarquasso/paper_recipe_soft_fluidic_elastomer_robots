@@ -1,20 +1,15 @@
 ﻿ToDos:
 
 Not Done:
+a) Proof-read and final type-set
+b) figure permissions
 
 
 
 
--------------------- Power Section --------------
-10. Modify Power Section so that it talks about: 
-	Transmission medium: pneumatic/hydraulics, allowing any type of liquids. 
-	Architecture: Closed/Open circuit. - Andy
-12. Add short explanations to section 5 for the new figures and adding of 
-	Design Constraints for Locomotion/ Design Constraints for portability - Andy  
 
 
 -------------------- Loco, Manip, and Disc Sections --------------
-19. Add schematic picture to existing figure in ’Locomotion' section for pneumatic fish - Andy
 14. Add 3d arm implementation. to section Manipulators - Andy
 15. Review the discussion section - Robert
 
@@ -48,7 +43,12 @@ Done:
 	 before the ribbed manipulator fab description - andy
 9. Minor Text revision Lost wax casting 
  	(changing words like 'manipulation' to 'robots' etc.) - Andy
-
+-------------------- Power Section --------------
+10. Modify Power Section so that it talks about: 
+	Transmission medium: pneumatic/hydraulics, allowing any type of liquids. 
+	Architecture: Closed/Open circuit. - Andy
+12. Add short explanations to section 5 for the new figures and adding of 
+	Design Constraints for Locomotion/ Design Constraints for portability - Andy  
 
 Not needed for now:
 Design section:
@@ -60,8 +60,7 @@ Design section:
 	add three belt robot (nikolaus, cagdas, andy), snake for serpentine motion (cagdas);
 - Examples of Robots fabricated using this method, so finally, here are the implementations of this: 
 	We already have three types of planar manipulators in there with figures, so lets just make it fit with the added sections for the other implementations.
-
-
+19. Add schematic picture to existing figure in ’Locomotion' section for pneumatic fish - Andy
 
 
 Bye
