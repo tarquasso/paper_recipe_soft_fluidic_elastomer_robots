@@ -10,7 +10,7 @@ b) figure permissions
 
 
 -------------------- Loco, Manip, and Disc Sections --------------
-14. Add 3d arm implementation. to section Manipulators - Andy
+
 15. Review the discussion section - Robert
 
 
@@ -49,6 +49,7 @@ Done:
 	Architecture: Closed/Open circuit. - Andy
 12. Add short explanations to section 5 for the new figures and adding of 
 	Design Constraints for Locomotion/ Design Constraints for portability - Andy  
+14. Add 3d arm implementation. to section Manipulators - Andy
 
 Not needed for now:
 Design section:
