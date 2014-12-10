@@ -1,25 +1,35 @@
-\section{Discussion}
-\label{sec:discussion}
+\section{Discussions}
+\label{sec:discussions}
 % What did we achieve?
-The design of the actuators and fabrication methods described in this paper provide recipes for the rapid fabrication of modular soft robots with arbitrary body morphology.
+The actuator designs and their fabrication methods described in this paper provide recipes for the rapid fabrication of modular soft robots with arbitrary body morphology.
 %
+We showed three fundamentally different fabrication processes and discussed their strengths and weaknesses when using them as completely soft unit-modules that can be concatenated to multi-segment manipulators or combined to robots for locomotion.
+%
+The lamination casting and the lost-wax casting processes allow for the embedding of heterogeneous functional elements like constraint layers or tubing into a soft actuator.
+This facilitates easier interfaces to pressure sources or other system components. 
+The simplicity of the retractable pin fabrication method allows for rapid prototyping of simple FEAs without the risk of mis-lamination and without the need for a wax core.  
+
+Furthermore, an experimental characterization of each segment morphology was presented, analyzing and comparing the effects of fluid energy onto a segment's bend angle and tip force. 
+It was seen that the pleated segment morphology is the stiffest, followed by the cylindrical, and then the ribbed. 
+The cylindrical morphology has a prominent bend angle nonlinearity for low input volumes, but its behavior becomes almost linear for higher inflations. 
+Based on this insight, easier control of this morphology can be achieved through significant pre-pressurization of a segment.
+Furthermore, the cylindrical morphology requires the most amount of fluid energy to produce a given bend angle, whereas the others behave similar in bending.
+The pleated segment generally requires more fluid energy than both the ribbed and cylindrical morphologies to produce a tip force. 
+However, the pleated segment can accommodate significantly higher input energies and therefore can reach the highest maximum tip force. 
+
 %New capabilities
-This class of soft robots is very well-suited for tasks requiring: (i) interactions with humans and environments to be safe, (ii) uncertainty to be mitigated at the hardware level, (iii) continuous and dexterous deformation, and/or (iv) hardware to take an unstructured, amorphous form.
+This class of completely soft manipulator morphologies is very well-suited for tasks requiring: (i) interactions with humans and environments to be safe, (ii) uncertainty to be mitigated at the hardware level, (iii) continuous and dexterous deformation, and/or (iv) hardware to take an unstructured, amorphous form.
 %
 For example, by making robots from soft elastic materials, with no sharp edges, and with relatively low link inertia, a robot's reliance on sensors and software for safety is reduced.
 %
 The prospects for safe integrations between a robot and human are generally increased when the compliance of the material composing the machine match those of soft biological materials \citet{majidi2014soft}, and this feature is inherent to robots made of soft silicone elastomer.
 %
-An alternative approach is to allow resilient soft machines to handle some uncertainty at the hardware level in order to reduce the burden on the computational system.
+An alternative approach to robot manipulator design is to allow soft segments to handle some uncertainty at the hardware level in order to reduce the burden on the computational system.
 %
-For example, consider how a soft manipulator passively conforms to the environment's boundary. The planner is unaware of this complex interaction, but the primary task can still be successfully executed.
+For example, consider how a soft manipulator passively conforms to the environment's boundary. A planner is unaware of this complex interaction, but the primary task can still be successfully executed.
 %
 Further, modern inspection tasks as well as invasive surgery require devices with redundant degrees of freedom and high dexterity and often impose the constraint of navigating around sensitive objects.
 %
-As initially demonstrated here, soft robotic manipulators may be well-suited for this class of tasks.
+Soft robotic manipulators may be well-suited for this class of tasks.
 
 %What are the limitations and open problems
-
-
-
-%Lastly, this work brings to attention the need for proprioceptive localization systems for soft robots. Feedback for our controller comes currently from an exteroceptive localization system. This is a reasonable method for indoor, laboratory or factory environments where there is sufficient line of sight to the manipulator. However, this sensor approach is prohibitive in that the environment must be equipped with cameras and the tasks cannot occlude the view of these cameras onto the manipulator. Proprioceptive localization for soft robots is an important avenue for future research.
