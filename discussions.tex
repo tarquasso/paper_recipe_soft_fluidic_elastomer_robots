@@ -1,48 +1,25 @@
 \section{Discussion}
 \label{sec:discussion}
 % What did we achieve?
-Planar manipulation tasks, such as controlled end-effector movement in free space, whole body movement through confined space, and grasping-and-moving objects, are possible with very soft and highly compliant multi-segment arms made entirely from soft materials.
+The design of the actuators and fabrication methods described in this paper provide recipes for the rapid fabrication of modular soft robots with arbitrary body morphology.
 %
-By using a drive cylinder's volumetric displacement and each soft segment's endpoints as measured feedback, we achieved closed-loop configuration control of the presented soft manipulators despite their low structural impedance.
-%
-This control strategy is an advantageous alternative to open-loop or morphological control in that we can achieve repeatable and precise task-space positioning for novel tasks without trial-and-error.
-
 %New capabilities
 This class of soft robots is very well-suited for tasks requiring: (i) interactions with humans and environments to be safe, (ii) uncertainty to be mitigated at the hardware level, (iii) continuous and dexterous deformation, and/or (iv) hardware to take an unstructured, amorphous form.
 %
-For example, by making robots from soft elastic materials, with no sharp edges, and with relatively low link inertia, the robot's reliance of sensors and software for safety is reduced.
+For example, by making robots from soft elastic materials, with no sharp edges, and with relatively low link inertia, a robot's reliance on sensors and software for safety is reduced.
 %
 The prospects for safe integrations between a robot and human are generally increased when the compliance of the material composing the machine match those of soft biological materials \citet{majidi2014soft}, and this feature is inherent to robots made of soft silicone elastomer.
 %
-Additionally, current autonomous systems rely on computational tools like state-estimation, Bayesian models, and robust controllers to effectively mitigate uncertainty, but these approaches can be computationally intensive.
-%
 An alternative approach is to allow resilient soft machines to handle some uncertainty at the hardware level in order to reduce the burden on the computational system.
 %
-For example, consider how the soft arm passively conforms to the environment's boundary. The planner is unaware of this complex interaction, but the primary task can still be successfully executed.
+For example, consider how a soft manipulator passively conforms to the environment's boundary. The planner is unaware of this complex interaction, but the primary task can still be successfully executed.
 %
 Further, modern inspection tasks as well as invasive surgery require devices with redundant degrees of freedom and high dexterity and often impose the constraint of navigating around sensitive objects.
 %
 As initially demonstrated here, soft robotic manipulators may be well-suited for this class of tasks.
 
 %What are the limitations and open problems
-A primary limitation of this work is that the manipulator's dynamics are not modeled, and therefore not used in the manipulator's control.
-%
-Although sufficient performance is achieved for the investigated manipulation tasks,  it is reasonable to expect that the manipulator's speed could be increased and its settling time decreased if a dynamics-based control strategy were derived.
-%
-Further, in conducting these experiments it was observed that the soft manipulator can harmlessly collide with its environment, and this contact can be potentially leveraged to either increase primary task precision or its likelihood of success.
-%
-However, a method for detecting these collisions is not provided, and it is unclear to what extent the piecewise constant curvature modeling assumption used here is valid under environmental contact.
-%
-Accordingly, this is strictly a passive feature but future work could provide strategies for incorporating and/or exploiting collisions into the task-space planner.
-%
-Likely, more advanced kinematic models are needed to understand the deformation of soft manipulators constrained by environmental contact.
-%
-Lastly, this work brings to attention the need for proprioceptive localization systems for soft robots.
-%
-Feedback for our controller comes currently from an exteroceptive localization system.
-%
-This is a reasonable method for indoor, laboratory or factory environments where there is sufficient line of sight to the manipulator.
-%
-However, this sensor approach is prohibitive in that the environment must be equipped with cameras and the tasks cannot occlude the view of these cameras onto the manipulator.
-%
-Proprioceptive localization for soft robots is an important avenue for future research.
+
+
+
+%Lastly, this work brings to attention the need for proprioceptive localization systems for soft robots. Feedback for our controller comes currently from an exteroceptive localization system. This is a reasonable method for indoor, laboratory or factory environments where there is sufficient line of sight to the manipulator. However, this sensor approach is prohibitive in that the environment must be equipped with cameras and the tasks cannot occlude the view of these cameras onto the manipulator. Proprioceptive localization for soft robots is an important avenue for future research.
