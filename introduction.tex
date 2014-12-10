@@ -2,34 +2,33 @@
 \section{Introduction}
 \label{sec:Introduction}
 %%%%%%%%%%%%%%%%%%%%% Vision %%%%%%%%%%%%%%%%%%%%%%%%%
-
-The goal of this work is to describe several fabrication methods for soft robots. Each method produces a unit-module that can be actuated in the soft fluidic elastomer model. The unit-modules can be composed to create different soft robot morphologies.
+The goal of this work is to describe several fabrication methods for various kinds of soft robots. 
+Each fabrication method produces one or several unit-modules that can be actuated based on the soft fluidic elastomer model. 
+Each fabrication process can be used to create actuatable soft modules; these modules can be composed in series or in parallel to create a range of different soft robot morphologies.
 %The goal of this work is to provide and compare multiple actuator morphologies and multiple fabrication processes for realizing soft autonomous fluidic elastomer robots.
 %
-We experimentally validate these in the context of extremely soft and highly compliant locomotory robots and manipulators shown in Figure~\ref{fig:intro_new}.
-Each fabrication process can be used to create unit-actuatable soft modules; these modules can be composed in series or in parallel to create a range of soft robot morphologies.
+We experimentally validate these morphologies in the context of extremely soft and highly compliant locomotory robots and manipulators shown in Figure~\ref{fig:intro_new}.
+
 \begin{figure}[!t]
   \centering
   \includegraphics[width=3in]{figures/introduction/intronew_v2.jpg}
-  \caption{Extremely soft and highly compliant fluidic elastomer robots. (\textbf{a}) Ribbed planar manipulator \citep{marchese2014design}, (\textbf{b}) Cylindrical manipulator with gripper \citep{katzschmann2015autonomous}, (\textbf{c}) Self-contained pneumatic fish \citep{marchese2014autonomous}(photo courtesy of Devon Jarvis for popular mechanics), (\textbf{d}) Spatial cylindrical manipulator \citep{marchese2015design}, and (\textbf{e}) Self-contained hydraulic fish \citep{katzschmann2014hydraulic}. }\label{fig:intro_new}
+  \caption{Extremely soft and highly compliant fluidic elastomer robots. (\textbf{a}) Ribbed planar manipulator \citep{marchese2014design}, (\textbf{b}) Cylindrical manipulator with gripper \citep{katzschmann2015autonomous}, (\textbf{c}) Self-contained pneumatic fish \citep{marchese2014autonomous}, (\textbf{d}) Spatial cylindrical manipulator \citep{marchese2015design}, and (\textbf{e}) Self-contained hydraulic fish \citep{katzschmann2014hydraulic}. }\label{fig:intro_new}
 \end{figure}
-%(\textbf{b}) Cylindrical planar manipulator \citep{marchese2014whole}
+%REMOVED: (\textbf{b}) Cylindrical planar manipulator \citep{marchese2014whole}
 
 Soft robots exhibit continuum body motion, large scale deformation, and relatively high compliance compared to traditional rigid-bodied robots \citep{trivedi2008soft}.
 %
 Such characteristics give this class of robots advantages like the ability to mitigate uncertainty with passive compliance \citep{mcmahan2006field}, perform highly dexterous tasks \citep{deimel2014novel}, and exhibit resiliency \citep{tolley2014resilient}.
 %
-This work provides a recipe for designing and fabricating soft fluidic elastomer actuators and robotic systems.
+This work provides a recipe for designing and fabricating soft fluidic elastomer actuators and robotic systems. %NOTE: This sent does not really fit well at this point, might want to move it upwards into the first paragraph...
 
 %%%%%%%%%%%%%%%%%%%%% Challenges %%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection{Challenges}
 Recent reviews \citep{trivedi2008soft, trimmer2014journal, lipson2014challenges, majidi2014soft} articulate the challenges associated with creating robots from soft, nonlinear materials.
 %
-Current engineering tools are well-suited for rigid-bodied robots and when soft, nonlinear elastic materials are introduced, many of the underlying assumptions of these tools are broken.
+Current engineering tools are well-suited for rigid-bodied robots and when soft, nonlinear elastic materials are introduced, many of the underlying assumptions of these tools are not valid anymore.
 %
-To create fluidic elastomer robots, we must overcome many technical challenges, many of which have to do with design and fabrication.
-%
-More specifically, this work addresses the following challenges:
+To create fluidic elastomer robots, we must overcome many technical challenges:
 (i) We need methods for composing soft-unit modules to create complex morphologies suitable for robot bodies capable of autonomous locomotion and manipulation.
 That is, we need to identify appropriate modules and ways of assembling these into multi-body robots.
 (ii) Consistently reproducing certain properties of soft robots, for example their elasticity or internal channel geometry, is difficult using conventional fabrication techniques.
@@ -40,9 +39,9 @@ Accordingly, we must develop fabrication techniques that balance the competing g
 %This work is first to show that planar manipulation with soft fluidic elastomer robots is possible and first to provide an approach for closed-loop control and planning of such manipulators.
 This work makes the following contributions:
 \begin{enumerate}
-  \item Three fabrication processes for reliably manufacturing these FEAs. These are (i) a lamination-based casting process with heterogeneous embedded components, (ii) a retractable-pin-based casting process, (iii) a lost-wax-based casting process;
- \item Three viable fluidic elastomer actuator (FEA) morphologies. That is, a FEA with a (i) ribbed channel structure and embedded transmission lines, (ii) cylindrical channel structure and hollow interior, (iii) seamless pleated channel structure;
-  \item A survey of recent robots built using these design and fabrication approaches (See Fig.~\ref{fig:intro_new}).
+ \item Classification of three viable fluidic elastomer actuator (FEA) morphologies. That is, an FEA with a (i) ribbed channel structure and embedded transmission lines, (ii) cylindrical channel structure and hollow interior, (iii) seamless pleated channel structure;
+ \item Three fabrication processes allowing to reliably manufacture these FEAs. These are (i) a lamination-based casting process with heterogeneous embedded components, (ii) a retractable-pin-based casting process, (iii) a lost-wax-based casting process; 
+ \item A survey of recent robots built using these design and fabrication approaches.
 \end{enumerate}
 This work significantly extends three previous conference publications: \citep{marchese2014design}, \citep{marchese2014whole}, and \citep{katzschmann2015autonomous}.
 
