@@ -15,3 +15,6 @@ texput.log
 root.aux
 root.bbl
 root.blg
+*.log
+*.gz
+~$*.docx
