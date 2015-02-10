@@ -1,0 +1,41 @@
+05-Feb-2015
+
+Dear Mr. Marchese:
+
+Manuscript ID SORO-2014-0022 entitled "A Recipe for Soft Fluidic Elastomer Robots" which you submitted to  Soft Robotics, has been reviewed. Your paper was very well received and is a significant contribution to the field. The comments of the reviewer(s) are included at the bottom of this letter and in the attached pdf. 
+The reviewer(s) have recommended some minor revisions to your manuscript.  Therefore, I invite you to respond to the reviewer(s)' comments and revise your manuscript. If you can do this quickly and adequately (by Feb 12th) we will try to accelerate the publication of your paper. If you need more time please let me know so that we can plan our upcoming issues of Volume 2. 
+To revise your manuscript, log into https://mc.manuscriptcentral.com/soro and enter your Author Center, where you will find your manuscript title listed under "Manuscripts with Decisions."  Under "Actions," click on "Create a Revision."  Your manuscript number has been appended to denote a revision.
+You will be unable to make your revisions on the originally submitted version of the manuscript.  Instead, revise your manuscript using a word processing program and save it on your computer.  Please also highlight the changes to your manuscript within the document by using the track changes mode in MS Word or by using bold or colored text.
+Once the revised manuscript is prepared, you can upload it and submit it through your Author Center.
+When submitting your revised manuscript, you will be able to respond to the comments made by the reviewer(s) in the space provided.  You can use this space to document any changes you make to the original manuscript.  In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the reviewer(s).
+IMPORTANT:  Your original files are available to you when you upload your revised manuscript.  Please delete any redundant files before completing the submission.
+Because we are trying to facilitate timely publication of manuscripts submitted to  Soft Robotics, your revised manuscript should be uploaded as soon as possible.  If it is not possible for you to submit your revision in a reasonable amount of time, we may have to consider your paper as a new submission.
+Once again, thank you for submitting your manuscript to Soft Robotics and I look forward to receiving your revision.
+
+Sincerely,
+Prof. Barry Trimmer
+Editor-in-Chief, Soft Robotics
+Barry.Trimmer@tufts.edu
+
+Reviewer(s)' Comments to Author:
+Reviewer: 1
+
+Comments to the Author
+see pdf
+
+Reviewer: 2
+
+Comments to the Author
+The paper presents an interesting analysis for soft roboticists using FEA. Though the paper does not present original research results in a strict sense, it can be of interest for soft robotics readers and soft robotics researchers.
+The paper is well-written and easy-to-read. No major revisions are required, but few revisions are suggested, especially in the part on related works.
+The works on cable-actuated structures should be treated separately from those using SMA. In this latter field, you should consider the following works, very relevant to your analysis:
+Cianchetti M, Licofonte A, Follador M, Rogai F, Laschi C (2014) “Bioinspired Soft Actuation System using Shape Memory Alloys” Actuators, 3(3), 226-244.
+Koh, J.-s. & Cho, K.-j. Omega-Shaped Inchworm-Inspired Crawling Robot With Large-Index-and-Pitch (LIP) SMA Spring Actuators Mechatronics, IEEE/ASME Transactions on, 2013, 18, 419-429 Kim, S.; Hawkes, E.; Cho, K.; Joldaz, M.; Foleyz, J. & Wood, R. Micro artificial muscle fiber using NiTi spring for soft robotics Intelligent Robots and Systems, 2009. IROS 2009. IEEE/RSJ International Conference on, 2009, 2228-2234 Umedachi, T.; Vikas, V. & Trimmer, B. Highly deformable 3-D printed soft robot generating inching and crawling locomotions with variable friction legs Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on, 2013, 4590-4595
+
+In the section on PAM you should include:
+Caldwell, D. G.; Tsagarakis, N. & Medrano-Cerda, G. A. Bio-mimetic actuators: polymeric Pseudo Muscular Actuators and pneumatic Muscle Actuators for biological emulation Mechatronics, 2000, 10, 499 – 530
+
+In the section on FEA it may be interesting:
+Cianchetti M, Ranzani T, Gerboni G, Nanayakkara T, Althoefer K, Dasgupta P, Menciassi A (2014) “Soft robotics technologies to address shortcomings in today’s minimally invasive surgery: the STIFF-FLOP approach” Soft Robotics, 1(2) 122-131.
+
+In this same section, please reduce and/or better discuss your own works, which are cited with very many references (19).
