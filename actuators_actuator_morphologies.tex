@@ -162,17 +162,28 @@ To characterize the actuated segments, we first perform bending tests to experim
 %
 In these experiments, the base of each segment is grounded securely in a fixture and the segment's tip is supported vertically with a ball transfer. %removed: ", if necessary." <-because this seems like vague statement
 %
-The setup is shown in the left colum. of Figure~\ref{fig:characterization_setup}.
+\hl{The setup is shown in the left column of Figure~\mbox{\ref{fig:characterization_setup}}.}
 %
-Then, the segment's agonist channel is incrementally filled under closed-loop volume control via the displacement of a fluidic drive cylinder; please refer to Section~\ref{sec:Power}.
+The segment's agonist channel is incrementally filled under closed-loop volume control via the displacement of a fluidic drive cylinder; please refer to Section~\ref{sec:Power}.
 %
 After each incremental fill, we allow pressure within the cylinder and within the actuated channel to equalize before measurements of the channel's pressure and the segment's curvature are taken.
 %
 Curvature is assumed to be constant along the length of the segment and is uniquely defined by measuring the cartesian locations of the base and the tip of the segment; refer to \citet{marchese2014design}.
 %
 From this curvature we compute the segment's bend angle.
+
+Since this is a quasi-static process, fluid pressure and supply volume measurements can be used to determine the elastic potential fluid energy input into the actuation system.
 %
-Each segment's geometry and cavity volume is different, because every actuator segment was built with a different type of robot prototype in mind. The geometries and the resulting cavity volumes are listed in Table~\ref{tab:ComparativeCharacterization}.
+The actuation system consists of the elastomeric segment and the internal compressible transmission fluid.
+%
+The elastic potential fluid energy serves as a comparative metric between the different actuator segment designs.
+%
+The potential energy is calculated by
+\begin{equation}\label{eqn:energy}
+    V_{Elastic} = \int_0^{\mathbb{V}_c} p_c\left( \mathbb{V} \right) \, \text{d} \mathbb{V}.
+\end{equation}
+%
+\hl{Each segment's geometry and cavity volume is different, because each actuator segment was built with a different type of robot prototype in mind. The geometries and the resulting cavity volumes are listed in Table~\mbox{\ref{tab:ComparativeCharacterization}}.}
 %Table
 \begin{table}[htb]
 \caption{Geometric Parameters of an Actuator Segment}
@@ -199,26 +210,15 @@ Cavity Volume per Side [ml] & 1.04 & 0.31 & 5.12 \\
 % Cavity Volume: Cylindrical: 1 * 40 * 2.8 * 2.8 = 313.6
 % Cavity Volume: Pleated: 10 * 12.9 * 12.3 * 2.8 + 10 * 3.1 * 3.5 * 6.3 = 4442.76 +683.55 = 5126.31
 %
-The different cavity volumes and the different characteristic deformation behavior of each morphology under pressurization require significantly different volumetric displacements.
-%
-Since this is a quasi-static process, fluid pressure and supply volume measurements can be used to determine the elastic potential fluid energy input into the actuation system.
-%
-The actuation system consists of the elastomeric segment and the internal compressible transmission fluid.
-%
-The elastic potential fluid energy serves as a comparative metric between the different actuator segment designs.
-%
-The potential energy is calculated by
-\begin{equation}\label{eqn:energy}
-    V_{Elastic} = \int_0^{\mathbb{V}_c} p_c\left( \mathbb{V} \right) \, \text{d} \mathbb{V}.
-\end{equation}
-%
+The different cavity volumes and the different characteristic deformations of each morphology under pressurization require significantly different volumetric displacements.
+
 Additionally, a blocking force test is performed in order to understand the variability in tip force output between segment morphologies.
 %
 Again, a similar experimental procedure is used as for the bending characterization; however, during blocking force experiments a plate attached via a force transducer to ground is mounted in contact with the segment's tip, orthogonal to the bending plane.
 %
 This effectively measures the force required to block the actuator from bending.
 %
-The setup is shown in the right column of Figure~\ref{fig:characterization_setup}.
+\hl{The setup is shown in the right column of Figure~\mbox{\ref{fig:characterization_setup}}.}
 %
 \begin{figure*}[htb]
         \centering
@@ -251,7 +251,7 @@ The setup is shown in the right column of Figure~\ref{fig:characterization_setup
 
 Figure~\ref{fig:actuator_characterization} details the results of these characterization experiments from which we can make several observations.
 %
-First, the pleated morphology is generally the stiffest, followed by the cylindrical, and then the ribbed, where stiffness is defined as $\frac{\partial p_c}{\partial \mathbb{V}_c}$ (Fig.~\ref{fig:Characterization_PressureVsVolume}).
+First, the pleated morphology is generally the stiffest, followed by the cylindrical, and then the ribbed, where stiffness is defined as $\frac{\partial p_c}{\partial \mathbb{V}_c}$ in the regime where $\mathbb{V}_c$ is greater than 25 mL (Fig.~\ref{fig:Characterization_PressureVsVolume}).
 %
 Second, the cylindrical morphology has a salient bend angle nonlinearity (Fig.~\ref{fig:Characterization_CurvatureVsVolume}).
 %
@@ -263,9 +263,3 @@ Lastly, the pleated segment generally requires more fluid energy than both the r
 %
 However, the pleated segment can accommodate significantly higher input energies and therefore can reach the highest maximum tip force.
 %
-
-<<<<<<< HEAD
-=======
-
- 
->>>>>>> deb88818979c1de6b4564fa9988e9c436dd156b4
