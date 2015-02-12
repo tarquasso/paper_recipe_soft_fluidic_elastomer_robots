@@ -14,17 +14,21 @@ In the following we review four common actuator types, and these are also depict
   \caption[Common actuation approaches for soft robots.]{Common actuation approaches for soft robots. (\textbf{a}) Shape Memory Alloy (SMA) actuators \citep{seok2010peristaltic}, (\textbf{b}) Pneumatic Artificial Muscle (PAM) actuators \citep{mcmahan2006field}, (\textbf{c}) Fluidic Elastomer Actuators (FEAs) \citep{onal2011soft}, and (\textbf{d}) Fiber reinforced FEAs \citep{galloway2013mechanically}.}\label{fig:RW actuation}
 \end{figure}
 
-\subsubsection{Tendons}
-\label{subsubsec:RW Tendons}
-Originally, many hard hyper redundant and hard continuum robots \citep{cieslak1999elephant, buckingham2002snake, gravagne2002uniform, hannan2003kinematics, mcmahan2005design, camarillo2009configuration} used an array of servomotors or linear actuators to pull cables that move rigid connecting plates located between body segments.
-Some softer robots have adopted a similar actuation scheme consisting of tendons pulling rigid fixtures embedded within an elastomer body.
-For example, the elastomer-based bio-inspired octopus arm developed in  \citet{calisti2010study, laschi2012soft} and \citet{calisti2011octopus} uses Shape Memory Alloy (SMA) actuation.
-Further, \citet{seok2010peristaltic} use SMA actuators within a worm-like locomotory robot (see Fig.~\ref{fig:RW actuation}a).
-The basic operating principle behind SMA technology is that nickel titanium (NiTi) wire contracts under joule heating.
+\subsubsection{Shape Memory Alloy Actuators}
+\label{subsubsec:RW SMA}
+\hl{The basic operating principle behind Shape Memory Alloy (SMA) technology is that nickel titanium (NiTi) wire contracts under joule heating.
 This heating is typically produced by passing electrical current through the wire.
 The contracting wire can be used as an agonist actuator, similar to the way one's bicep pulls the forearm towards the body.
-There are also soft elastomer robots that use more traditional variable tension cables.
-For example, the soft-bodied fish developed by \citet{youcef2006design} as well as the soft arm developed by \citet{wang2013visual} use this actuation approach, but these both consist of only one actuated segment.
+\mbox{\citet{kim2009micro}} model, design, and fabricate these actuators and show their viability in soft robot applications.
+Additionally, the elastomer-based bio-inspired octopus arms developed in \mbox{\citet{laschi2012soft}} and \mbox{\citet{cianchetti2014bioinspired}} use SMA actuation to emulate a muscular hydrostat.
+Further, \mbox{\citet{seok2010peristaltic}} use SMA spring actuators to generate peristaltic locomotion in a worm-like robot (see Fig.~\mbox{\ref{fig:RW actuation}}a), \mbox{\citet{koh2013omega}} develop SMA coil-spring actuators to generate two-anchor crawling in an inchworm-like robot, and \mbox{\citet{umedachi2013highly}} use SMA actuators to produce both crawling and inching in 3D printed soft robot.}
+
+
+\subsubsection{Cable Actuators}
+\label{subsubsec:RW Cables}
+Originally, many hard hyper redundant and hard continuum robots \citep{cieslak1999elephant, buckingham2002snake, gravagne2002uniform, hannan2003kinematics, mcmahan2005design, camarillo2009configuration} used an array of servomotors or linear actuators to pull cables that move rigid connecting plates located between body segments.
+Some softer robots have adopted a similar actuation scheme consisting of tendons pulling rigid fixtures embedded within an elastomer body.
+\hl{For example, the soft-bodied fish developed by \mbox{\citet{youcef2006design}}, the soft octopus-inspired arms developed in \mbox{\citet{calisti2010study}} and \mbox{\citet{calisti2011octopus}}, as well as the soft arm developed by \mbox{\citet{wang2013visual}} use this actuation approach.}
 
 \subsubsection{Pneumatic Artificial Muscles}
 \label{subsubsec:RW PMA}
@@ -32,7 +36,7 @@ Another common actuation scheme for soft robots involves distributed Pneumatic A
 A PAM is fundamentally composed of an inflatable elastic tube surrounded by a braided mesh.
 Depending on the weave pattern of the braided mesh, the actuator can be designed to contract or extend under input pressure.
 Typically, these actuators are operated with driving pressures between 50 to 100 ~psi.
-These actuators have been used and studied extensively in \citet{chou1996measurement, tondu2000modeling} and \citet{daerden2002pneumatic}.
+\hl{These actuators have been used and studied extensively in \mbox{\citet{chou1996measurement, tondu2000modeling}} \mbox{\citet{caldwell2000bio, daerden2002pneumatic}} and \mbox{\citet{reynolds2003modeling}}.}
 Notable semi-soft robots using PAMs include \citet{mcmahan2006field, pritts2004design} and \citet{kang2013design}.
 
 \subsubsection{Fluidic Elastomer Actuators}
@@ -46,12 +50,18 @@ Each of these elastomer layers contains embedded fluidic channels.
 By pressurizing the fluid entrapped in these channels, stress is induced within the elastic material producing localized strain. This strain in combination with the relative in-extensibility of the constraint produces body segment bending.
 FEAs can be powered pneumatically or hydraulically.
 
-\hl{As the review by} \citet{rus2014soft} \hl{discusses,} perhaps the earliest application of pneumatically actuated elastomer bending segments to robotics was by \citet{suzumori1992applying}.
+\hl{As the review by \mbox{\citet{rus2014soft}} discusses,} perhaps the earliest application of pneumatically actuated elastomer bending segments to robotics was by \citet{suzumori1992applying}.
 Here fiber-reinforced Flexible Microactuators (FMAs) were developed and shown to be viable in a manipulator and multi-fingered hand.
-Recently, these concepts have been extended and developed into the FEA and used to build a variety of soft mechanisms \citep{shepherd2011multigait, ilievski2011soft, morin2012camouflage, martinez2013robotic, katzschmann2015autonomous, marchese2015design}
+\hl{Recently, these concepts have been extended and developed into the FEA and used to build a variety of soft mechanisms \mbox{\citep{shepherd2011multigait, ilievski2011soft, morin2012camouflage}}
+\mbox{\citep{martinez2013robotic}}
 and soft robotic systems
-\citep{onal2011soft, marchese2011soft, onal2013autonomous, marchese2014autonomous, marchese2014design, marchese2014whole, katzschmann2014hydraulic, tolley2014untethered, tolley2014resilient, katzschmann2015autonomous, marchese2015design, marchese2015control, marchese2015dynamics}.
+\mbox{\citep{onal2011soft, marchese2011soft, onal2013autonomous}}
+\mbox{\citep{marchese2014autonomous, marchese2014design, marchese2014whole}}
+\mbox{\citep{katzschmann2014hydraulic, katzschmann2015autonomous}}
+\mbox{\citep{tolley2014untethered, tolley2014resilient}} \mbox{\citep{marchese2015design}}
+\mbox{\citep{marchese2015control, marchese2015dynamics}}.}
 Furthermore, \citet{polygerinos2013towards} and \citet{mosadegh2014pneumatic} have investigated more elaborate channel designs in order to reduce elastomer strain on the outer layer of the actuator, allowing for higher bending curvatures.
+\hl{Additionally, \mbox{\citet{cianchetti2014soft}} develop a fluid actuated bending arm with a jamming \mbox{\citep{brown2010universal, liu1998nonlinear}} spine.}
 
 There are also less flexible, fiber-reinforced FEAs (see Fig.~\ref{fig:RW actuation}d) that occupy the soft actuator space between purely elastomer FEAs and PAMs.
 While these actuators have to operate with comparably higher driving pressures between 25 and 35~psi, they can accordingly apply higher forces which is advantageous for certain applications.
