@@ -210,7 +210,7 @@ Cavity Volume per Side [ml] & 1.04 & 0.31 & 5.12 \\
 % Cavity Volume: Cylindrical: 1 * 40 * 2.8 * 2.8 = 313.6
 % Cavity Volume: Pleated: 10 * 12.9 * 12.3 * 2.8 + 10 * 3.1 * 3.5 * 6.3 = 4442.76 +683.55 = 5126.31
 %
-The different cavity volumes and the different characteristic deformations of each morphology under pressurization require significantly different volumetric displacements.
+\hl{The different cavity volumes and the different characteristic deformations of each morphology under pressurization require significantly different volumetric displacements.}
 
 Additionally, a blocking force test is performed in order to understand the variability in tip force output between segment morphologies.
 %
@@ -251,15 +251,22 @@ This effectively measures the force required to block the actuator from bending.
 
 Figure~\ref{fig:actuator_characterization} details the results of these characterization experiments from which we can make several observations.
 %
-First, the pleated morphology is generally the stiffest, followed by the cylindrical, and then the ribbed, where stiffness is defined as $\frac{\partial p_c}{\partial \mathbb{V}_c}$ in the regime where $\mathbb{V}_c$ is greater than 25 mL (Fig.~\ref{fig:Characterization_PressureVsVolume}).
+\hl{First, the relationship $\frac{\partial p_c}{\partial \mathbb{V}_c}$ is similar among the different morphologies for inputs up to approximately 20 mL. In the regime where $\mathbb{V}_c$ is above 25 mL, the pleated morphology has the highest $\frac{\partial p_c}{\partial \mathbb{V}_c}$, followed by the cylindrical, and then the ribbed } (Fig.~\ref{fig:Characterization_PressureVsVolume}).
 %
 Second, the cylindrical morphology has a salient bend angle nonlinearity (Fig.~\ref{fig:Characterization_CurvatureVsVolume}).
 %
 More specifically, small volumetric fluid changes of less than $15\,$mL provide little control authority over curvature; however, above $25\,$mL displacements, the control authority is strong and the curvature-volume relationship is approximately linear.
 %
-Third, the cylindrical morphology requires the most amount of fluid energy to produce a given bend angle and the ribbed and pleated segments require approximately the same amount of fluid energy to generate equivalent bending (Fig.~\ref{fig:Characterization_CurvatureVsEnergy}).
+\hl{This can be explained by the initial, relatively large radial expansion of the segment.}
 %
-Lastly, the pleated segment generally requires more fluid energy than both the ribbed and cylindrical morphologies to produce a given tip force.
+\hl{Third, for a given fluid energy input, the bending angle of the cylindrical actuator is the least while the blocking force is the highest. In this morphology, a considerable amount of fluid energy radially expands the actuated channel. This energy does not contribute to axial expansion and therefore does not contribute to increasing the bend angle. However, the radial expansion causes a considerable increase in area moment of inertia, which stiffens the actuator and causes it to have a higher blocking force than the other designs.}
+%
+Fourth, the cylindrical morphology requires the most amount of fluid energy to produce a given bend angle and the ribbed and pleated segments require approximately the same amount of fluid energy to generate equivalent bending (Fig.~\ref{fig:Characterization_CurvatureVsEnergy}).
+%
+\hl{This observation holds over the range of inputs generated during these experiments.}
+%
+Last, the pleated segment requires more fluid energy than both the ribbed and cylindrical morphologies to produce a given tip force \hl{for inputs greater than 1 J.}
 %
 However, the pleated segment can accommodate significantly higher input energies and therefore can reach the highest maximum tip force.
 %
+\hl{Each actuator was inflated to either its maximum before the elastomer plastically deformed or to the highest feasible bend angle. The pleated prototype is larger in scale than the cylindrical and ribbed, therefore it can be driven to higher energy inputs.} 
